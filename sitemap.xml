@@ -2,14 +2,12 @@
 <urlset 
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Yixa Main Site -->
   <url>
     <loc>https://yixaaa.github.io/</loc>
     <lastmod>2025-10-29</lastmod>
     <priority>1.0</priority>
   </url>
 
-  <!-- Jenifaurora Legacy Site -->
   <url>
     <loc>https://jenifaurora.github.io/</loc>
     <lastmod>2025-10-29</lastmod>
@@ -17,3 +15,4 @@
   </url>
 
 </urlset>
+
