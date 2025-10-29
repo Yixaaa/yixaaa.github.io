@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Yixa | Official Links</title>
+  <meta name="description" content="Official Yixa Links – TikTok, Instagram, Discord Server and more.">
+  <meta name="keywords" content="Yixa, Yixaa, TikTok, Instagram, Discord, influencer, looksmaxx, linktree, social links">
+  <meta name="author" content="Yixa">
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/webp" href="favicon.webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.webp">
+  <link rel="shortcut icon" type="image/webp" href="favicon.webp">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yixa | Official Links">
+  <meta property="og:description" content="Find Yixa on TikTok, Instagram, and Discord.">
+  <meta property="og:image" content="main.jpg">
+  <meta property="og:url" content="https://yixa.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+  <section class="home">
+    <div class="home-img">
+      <img src="main.jpg" alt="Yixa">
+    </div>
+
+    <div class="home-content">
+      <h1>Hi, I'm <span>Yixa</span></h1>
+      <h3 class="typing-text"><span></span></h3>
+      <p>Welcome to my official page! Check out my social links below 👇</p>
+
+      <!-- 🎯 Social Buttons -->
+      <div class="social-icons">
+        <a href="https://www.tiktok.com/@yixaa" target="_blank" aria-label="TikTok" class="tiktok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://www.instagram.com/ayix_h?utm_source=ig_web_button_share_sheet&igsh=Y3k1b3RicDBpb2p5" target="_blank" aria-label="Instagram" class="instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://discord.gg/yixacommunity" target="_blank" aria-label="Discord" class="discord">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Typing Animation Script -->
+  <script>
+    const phrases = [
+      "TikTok Influencer",
+      "Instagram Influencer",
+      "Looksmaxxing enthu",
+    ];
+
+    let currentPhraseIndex = 0;
+    let currentLetterIndex = 0;
+
+    // Adaptive speed for mobile vs desktop
+    const isMobile = window.innerWidth <= 768;
+    const typingSpeed = isMobile ? 180 : 130;
+    const erasingSpeed = isMobile ? 120 : 90;
+    const delayBetweenPhrases = 2000;
+
+    const typingTextElement = document.querySelector('.typing-text span');
+
+    function typePhrase() {
+      if (currentLetterIndex < phrases[currentPhraseIndex].length) {
+        typingTextElement.textContent += phrases[currentPhraseIndex].charAt(currentLetterIndex);
+        currentLetterIndex++;
+        setTimeout(typePhrase, typingSpeed);
+      } else {
+        setTimeout(erasePhrase, delayBetweenPhrases);
+      }
+    }
+
+    function erasePhrase() {
+      if (currentLetterIndex > 0) {
+        typingTextElement.textContent = phrases[currentPhraseIndex].substring(0, currentLetterIndex - 1);
+        currentLetterIndex--;
+        setTimeout(erasePhrase, erasingSpeed);
+      } else {
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        setTimeout(typePhrase, typingSpeed);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(typePhrase, delayBetweenPhrases);
+    });
+  </script>
+  
+  <footer class="copyright">
+    © 2025 Jenifaurora. All Rights Reserved.
+  </footer>
+</body>
+</html>
