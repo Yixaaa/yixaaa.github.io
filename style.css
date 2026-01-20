@@ -343,6 +343,16 @@ span {
   transition: color 0.3s ease, opacity 0.3s ease;
 }
 
+/* Make the link inherit styles */
+.copyright a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  color: #de3163;
+}
+
 .home-content,
 .home-img,
 .typing-text,
@@ -379,5 +389,59 @@ span {
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
+  }
+}
+/* --- THE METHOD BUTTON --- */
+.method-btn {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding: 1.6rem 3.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  color: #000;
+  background: linear-gradient(90deg, #ffd700, #fff, #ffd700);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.method-btn:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 0 80px rgba(255, 215, 0, 1);
+  background: linear-gradient(90deg, #fff, #ffd700, #fff);
+  color: #000;
+}
+.promo-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  color: #ffd700;
+  overflow: hidden;
+  z-index: 9999;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.promo-track {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  animation: scrollPromo 50s linear infinite;
+}
+
+@keyframes scrollPromo {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
