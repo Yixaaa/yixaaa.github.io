@@ -796,3 +796,43 @@ transform:translateY(-15px);
 }
 
 }
+
+
+@media (max-width:768px){
+
+  body{
+    animation:none;
+    background:linear-gradient(135deg,#000,#111);
+  }
+
+  body::before,
+  body::after{
+    display:none;
+  }
+
+  .home .home-content h1{
+    text-shadow:0 0 12px rgba(255,215,0,0.3);
+  }
+
+  
+  .typing-text{
+    text-shadow:0 0 12px rgba(255,215,0,0.4);
+  }
+
+  .social-icons::before{
+    display:none;
+  }
+
+  .social-icons a{
+    box-shadow:0 0 15px rgba(255,215,0,.25);
+  }
+
+  .home-img img{
+    box-shadow:0 0 15px rgba(255,215,0,.3);
+    transition:none;
+  }
+
+  .home-img img:hover{
+    transform:none;
+  }
+}
