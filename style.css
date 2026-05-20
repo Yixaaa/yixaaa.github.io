@@ -836,3 +836,61 @@ transform:translateY(-15px);
     transform:none;
   }
 }
+.discord-join-btn{
+display:inline-block;
+margin-top:30px;
+padding:16px 45px;
+
+border-radius:50px;
+
+font-size:2rem;
+font-weight:800;
+
+background:linear-gradient(
+90deg,
+#5865F2,
+#7B84FF
+);
+
+color:white;
+
+box-shadow:
+0 0 20px rgba(88,101,242,.7),
+0 0 50px rgba(88,101,242,.5);
+
+transition:.35s;
+
+animation:discordButtonGlow 2s infinite alternate;
+}
+
+.discord-join-btn{
+display:inline-block;
+position:relative;
+z-index:999;
+
+margin-top:30px;
+padding:16px 45px;
+
+border-radius:50px;
+
+font-size:2rem;
+font-weight:800;
+
+background:linear-gradient(
+90deg,
+#5865F2,
+#7B84FF
+);
+
+color:white;
+cursor:pointer;
+pointer-events:auto;
+
+box-shadow:
+0 0 20px rgba(88,101,242,.7),
+0 0 50px rgba(88,101,242,.5);
+
+transition:.35s;
+
+animation:discordButtonGlow 2s infinite alternate;
+}
